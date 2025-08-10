@@ -41,7 +41,10 @@ export default function CharacterList() {
   return (
     <div>
       <h2>Rick & Morty Characters</h2>
-
+      <div style={{ marginTop: '12px' }}>
+        <button onClick={loadPrev} disabled={!hasPrev || loading} className='btnRandM'>Anterior</button>
+        <button onClick={loadNext} disabled={!hasNext || loading} className='btnRandM'>Siguiente</button>
+      </div>
       {loading && <p>Cargando...</p>}
 
       <div style={{
